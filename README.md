@@ -4,4 +4,5 @@ How to install:
 - "New Terminal"
 - "composer install"
 - "npm install"
+- Don't forget to run "npm run watch"
 - done
