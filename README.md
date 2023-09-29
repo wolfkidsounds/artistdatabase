@@ -11,3 +11,4 @@ How to use
 9. run "npm install" (installs all npm dependencies)
 10. run "npm run watch" (runs the watcher to compile css and javascript)
 11. run "symfony serve -d" (starts the server)
+12. run "docker-compose up -d" (starts the docker container and serves the database)
