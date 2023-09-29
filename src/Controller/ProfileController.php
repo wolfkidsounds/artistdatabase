@@ -8,11 +8,18 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class ProfileController extends AbstractController
 {
-    #[Route('/profile', name: 'app_profile')]
-    public function index(): Response
+    #[Route('/users/{username}', name: 'app_profile')]
+    public function users(string $username = null): Response
     {
-        return $this->render('profile/index.html.twig', [
-            'controller_name' => 'ProfileController',
-        ]);
+        if ($username) {
+            return $this->render('account/profile.html.twig', [
+                'controller_name' => 'ProfileController',
+            ]);
+            
+        } else {
+            return $this->render('account/all_profiles.html.twig', [
+                'controller_name' => 'ProfileController',
+            ]);
+        }
     }
 }
