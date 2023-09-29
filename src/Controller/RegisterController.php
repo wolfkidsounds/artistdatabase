@@ -11,7 +11,7 @@ class RegisterController extends AbstractController
     #[Route('/register', name: 'app_register')]
     public function register(): Response
     {
-        return $this->render('register.html.twig', [
+        return $this->render('register/register.html.twig', [
             'controller_name' => 'RegisterController',
         ]);
     }
