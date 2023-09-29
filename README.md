@@ -1,3 +1,5 @@
+[![Symfony](https://github.com/wolfkidsounds/artistdatabase/actions/workflows/symfony.yml/badge.svg)](https://github.com/wolfkidsounds/artistdatabase/actions/workflows/symfony.yml)
+
 How to use
 
 1. Download "composer" -> https://getcomposer.org/download/ -> Composer-Setup.exe
