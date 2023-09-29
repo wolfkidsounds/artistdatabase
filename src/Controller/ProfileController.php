@@ -12,12 +12,12 @@ class ProfileController extends AbstractController
     public function users(string $username = null): Response
     {
         if ($username) {
-            return $this->render('account/profile.html.twig', [
+            return $this->render('profile/profile.html.twig', [
                 'controller_name' => 'ProfileController',
             ]);
             
         } else {
-            return $this->render('account/all_profiles.html.twig', [
+            return $this->render('profile/all_profiles.html.twig', [
                 'controller_name' => 'ProfileController',
             ]);
         }
