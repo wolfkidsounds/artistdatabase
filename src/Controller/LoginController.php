@@ -11,7 +11,7 @@ class LoginController extends AbstractController
     #[Route('/login', name: 'app_login')]
     public function login(): Response
     {
-        return $this->render('login.html.twig', [
+        return $this->render('login/login.html.twig', [
             'controller_name' => 'LoginController',
         ]);
     }
