@@ -1,0 +1,8 @@
+.container {
+    margin-left: 250px;
+    overflow: hidden;
+}
+
+.page-content {
+    padding: calc(70px + 24px) calc(24px * .75) 60px calc(24px * .75);
+}
