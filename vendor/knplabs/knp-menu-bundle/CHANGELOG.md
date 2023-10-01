@@ -1,6 +1,16 @@
+## 3.3.0 (2023-05-xx)
+
+* Increased minimum PHP version to 8.0 (to be consistent with KnpMenu 3.4)
+* Dropped support for Symfony 3 and 4
+* Deprecated use of Symfony templating component
+
+## 3.2.0 (2021-10-30)
+
+* Added support for Symfony 6
+
 ## 3.1.0 (2020-11-29)
 
-* Add support for php 8
+* Added support for PHP 8
 
 ## 3.0.0 (2019-12-01)
 
