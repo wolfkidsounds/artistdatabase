@@ -1,0 +1,11 @@
+aside {
+    background: #2a3042;
+    width: 250px;
+    z-index: 1001;
+    bottom: 0;
+    margin-top: 0;
+    position: fixed;
+    top: 70px;
+    -webkit-box-shadow: 0 0.75rem 1.5rem rgba(18,38,63,.03);
+    box-shadow: 0 0.75rem 1.5rem rgba(18,38,63,.03);
+}
