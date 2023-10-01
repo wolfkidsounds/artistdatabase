@@ -17,16 +17,22 @@
 
     <body>
         <header>
-            <div class="nav main"> {{ knp_menu_render('navMain') }} </div>
-            <div class="nav profile"> {{ knp_menu_render('navProfile') }} </div>
+            {{ include('partials/header.html.twig') }}
         </header>
 
-        <aside class="nav sidebar"> {{ knp_menu_render('navSidebar') }} </aside>
+        <aside class="nav sidebar">
+            {{ include('partials/sidebar.html.twig') }}
+        </aside>
 
         <div class="container">
-            {% block body %}
-            {% endblock %}
+            <div class="page-content">
+                {% block body %}
+                {% endblock %}
+            </div>
         </div>
-    </body>
 
+        <footer>
+            {{ include('partials/footer.html.twig') }}
+        </footer>
+    </body>
 </html>
