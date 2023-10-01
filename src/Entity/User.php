@@ -28,6 +28,21 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column]
     private ?string $password = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $email = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $vorname = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $nachname = null;
+
+    #[ORM\Column]
+    private ?\DateTimeImmutable $createdAt = null;
+
+    #[ORM\Column]
+    private ?\DateTimeImmutable $editedAt = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -52,7 +67,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      */
     public function getUserIdentifier(): string
     {
-        return (string) $this->username;
+        return (string) $this->email;
     }
 
     /**
@@ -96,5 +111,65 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     {
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
+    }
+
+    public function getEmail(): ?string
+    {
+        return $this->email;
+    }
+
+    public function setEmail(string $email): static
+    {
+        $this->email = $email;
+
+        return $this;
+    }
+
+    public function getVorname(): ?string
+    {
+        return $this->vorname;
+    }
+
+    public function setVorname(?string $vorname): static
+    {
+        $this->vorname = $vorname;
+
+        return $this;
+    }
+
+    public function getNachname(): ?string
+    {
+        return $this->nachname;
+    }
+
+    public function setNachname(?string $nachname): static
+    {
+        $this->nachname = $nachname;
+
+        return $this;
+    }
+
+    public function getCreatedAt(): ?\DateTimeImmutable
+    {
+        return $this->createdAt;
+    }
+
+    public function setCreatedAt(\DateTimeImmutable $createdAt): static
+    {
+        $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    public function getEditedAt(): ?\DateTimeImmutable
+    {
+        return $this->editedAt;
+    }
+
+    public function setEditedAt(\DateTimeImmutable $editedAt): static
+    {
+        $this->editedAt = $editedAt;
+
+        return $this;
     }
 }
