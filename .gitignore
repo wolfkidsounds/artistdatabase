@@ -6,7 +6,8 @@
 /config/secrets/prod/prod.decrypt.private.php
 /public/bundles/
 /var/
-/vendor/
+/vendor/*
+!/vendor/knplabs/
 ###< symfony/framework-bundle ###
 
 ###> phpunit/phpunit ###
