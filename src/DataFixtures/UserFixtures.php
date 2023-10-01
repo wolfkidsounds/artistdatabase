@@ -15,19 +15,16 @@ class UserFixtures extends Fixture
         $user->setUsername('admin');
         $user->setRoles(['ROLE_ADMIN']);
         $password = 'symfony';
-        $hashed_pwd = hash($user, $password);
- 
+        $hashed_pwd = UserFixtures::hash($user, $password);
         $user->setPassword($hashed_pwd);
-
+        $user->setEmail('admin@artist-database.com');
+        $user->setVorname('Symfony');
+        $user->setNachname('Administrator');
         $manager->persist($user);
-        
-        // $product = new Product();
-        // $manager->persist($product);
-
         $manager->flush();
     }
 
-    function hash( $user, $password, UserPasswordHasherInterface $passwordHasher ) {
+    static function hash( $user, $password, UserPasswordHasherInterface $passwordHasher = null ) {
  
         // hash the password (based on the security.yaml config for the $user class)
         $password_hashed = $passwordHasher->hashPassword(
