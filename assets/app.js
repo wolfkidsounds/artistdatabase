@@ -1,4 +1,3 @@
-import './bootstrap.js';
 /*
  * Welcome to your app's main JavaScript file!
  *
@@ -7,15 +6,9 @@ import './bootstrap.js';
  */
 
 // any CSS you import will output into a single css file (app.css in this case)
-import './styles/app.scss';
-import 'bootstrap';
+import './stimulus.js'; // Stimulus
+import './styles/app.scss'; // SCSS
+import './styles/app.css'; // CSS (Overwrites)
 
-import './styles/app.css';
-
-document.addEventListener('turbo:load', function (e) {
-    // this enables bootstrap tooltips globally
-    let tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-    let tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new Tooltip(tooltipTriggerEl)
-    });
-});
+const $ = require('jquery'); // Dies "verändert" das Jquery-Modul. Aber setzt *NICHT* global $ oder die jQuery variable
+require('bootstrap'); // Das Bootstrap-Modul exportiert nicht und sendet nichts als return
