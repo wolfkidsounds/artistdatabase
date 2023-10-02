@@ -21,15 +21,14 @@
                 {{ include('partials/header.html.twig') }}
             </header>
 
-            <div class="sidebar">
+            <div class="vertical-menu">
                 {{ include('partials/sidebar.html.twig') }}
             </div>
 
             <div class="content">
                 <div class="page-content">
                     <div class="row bredcrumbs-element">
-                        {% block breadcrumbs %}
-                        {% endblock %}
+                        {{ include('partials/breadcrumb.html.twig') }}
                     </div>
                     
                     {% block body %}
