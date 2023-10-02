@@ -16,23 +16,30 @@
     </head>
 
     <body>
-        <header>
-            {{ include('partials/header.html.twig') }}
-        </header>
+        <div id="layout-wrapper">
+            <header id="page-topbar">
+                {{ include('partials/header.html.twig') }}
+            </header>
 
-        <aside class="nav sidebar">
-            {{ include('partials/sidebar.html.twig') }}
-        </aside>
-
-        <div class="container">
-            <div class="page-content">
-                {% block body %}
-                {% endblock %}
+            <div class="sidebar">
+                {{ include('partials/sidebar.html.twig') }}
             </div>
-        </div>
 
-        <footer>
-            {{ include('partials/footer.html.twig') }}
-        </footer>
+            <div class="content">
+                <div class="page-content">
+                    <div class="row bredcrumbs-element">
+                        {% block breadcrumbs %}
+                        {% endblock %}
+                    </div>
+                    
+                    {% block body %}
+                    {% endblock %}
+                </div>
+            </div>
+
+            <footer class="footer">
+                {{ include('partials/footer.html.twig') }}
+            </footer>
+        </div>
     </body>
 </html>
