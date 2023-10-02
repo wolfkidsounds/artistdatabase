@@ -17,29 +17,25 @@ class MenuBuilder
         $this->factory = $factory;
     }
 
-    public function navMain(): ItemInterface
-    {
-        $menu = $this->factory->createItem('root');
-
-        $menu->addChild('Home', ['route' => 'app_main']);
-
-        return $menu;
-    }
-
     public function navSidebar(): ItemInterface
     {
-        $menu = $this->factory->createItem('root');
+        $menu = $this->factory->createItem('sidebar');
 
-        $menu->addChild('Home', ['route' => 'app_main']);
+        $menu->addChild('Dashboard', ['route' => 'app_main']);
+        $menu->addChild('Members', ['route' => 'app_main']);
+        $menu->addChild('Artists', ['route' => 'app_main']);
 
         return $menu;
     }
 
     public function navProfile(): ItemInterface
     {
-        $menu = $this->factory->createItem('root');
+        $menu = $this->factory->createItem('profile');
 
-        $menu->addChild('Home', ['route' => 'app_main']);
+        $menu->addChild('Profile', ['route' => 'app_main']);
+        $menu->addChild('Notifications', ['route' => 'app_main']);
+        $menu->addChild('Messages', ['route' => 'app_main']);
+        $menu->addChild('Settings', ['route' => 'app_main']);
 
         return $menu;
     }
