@@ -10,5 +10,5 @@ import './stimulus.js'; // Stimulus
 import './styles/app.scss'; // SCSS
 import './styles/app.css'; // CSS (Overwrites)
 
-require('bootstrap/dist/js/bootstrap.bundle'); // Bootstrap Popper.JS Bundle
+require('@popperjs/core'); // Popper JS wird von Bootstrap erwartet.
 require('bootstrap'); // Das Bootstrap-Modul exportiert nicht und sendet nichts als return
