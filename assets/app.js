@@ -10,5 +10,5 @@ import './stimulus.js'; // Stimulus
 import './styles/app.scss'; // SCSS
 import './styles/app.css'; // CSS (Overwrites)
 
-const $ = require('jquery'); // Dies "verändert" das Jquery-Modul. Aber setzt *NICHT* global $ oder die jQuery variable
+require('bootstrap/dist/js/bootstrap.bundle'); // Bootstrap Popper.JS Bundle
 require('bootstrap'); // Das Bootstrap-Modul exportiert nicht und sendet nichts als return
