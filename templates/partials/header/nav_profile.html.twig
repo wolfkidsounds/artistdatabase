@@ -1,0 +1,16 @@
+<div class="dropdown d-inline-block">
+    <button type="button" class="btn header-item dropdown-toggle" id="page-header-user-dropdown" data-bs-toggle="dropdown" data-toggle="dropdown" aria-expanded="false">
+        <img class="rounded-circle header-profile-user" src="{{ user.image|default(asset('images/user-solid.svg')) }}" alt="Header Avatar">
+    </button>
+    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="page-header-user-dropdown">
+        <div class="p-3 border-bottom profile-description">
+            <h5 class="mb-0">{{ user.name|default('username') }}</h5>
+            <p class="mb-0">{{ user.mail|default('usermail') }}</p>
+        </div>
+
+        {{ knp_menu_render('navProfile') }}
+
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item text-danger" href="/logout"><i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i> <span key="t-logout">Logout</span></a>
+    </div>
+</div>
