@@ -1,4 +1,4 @@
-header {
+#page-topbar {
     position: fixed;
     top: 0;
     right: 0;
@@ -71,11 +71,20 @@ header {
     color: var(--bs-gray-600);
 }
 
-.header-profile-avatar {
+.header-profile-user {
     height: 36px;
     width: 36px;
     background-color: var(--bs-gray-300);
     padding: 3px;
+}
+
+.header-item {
+    height: 70px;
+    -webkit-box-shadow: none!important;
+    box-shadow: none!important;
+    color: var(--bs-header-item-color);
+    border: 0;
+    border-radius: 0;
 }
 
 .notification,
@@ -88,4 +97,13 @@ header {
     top: 6px;
     right: 2px;
     font-size: 11px;
+}
+
+.dropdown .profile-description h6 {
+    color: var(--bs-gray-600);
+}
+
+.dropdown .profile-description p {
+    font-size:11px;
+    color: var(--bs-gray-500) !important;
 }
