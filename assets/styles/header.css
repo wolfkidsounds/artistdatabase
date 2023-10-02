@@ -107,3 +107,13 @@
     font-size:11px;
     color: var(--bs-gray-500) !important;
 }
+
+.dropdown-menu ul {
+    list-style:none;
+    margin:0px;
+    padding:0px;
+}
+
+.dropdown-menu i {
+    margin-right:10px;
+}
