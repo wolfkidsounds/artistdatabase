@@ -25,15 +25,24 @@ header {
 }
 
 .logo-box {
-    background: #2a3042;
     padding: 0 1.5rem;
     text-align: center;
     width: 250px;
-    height:70px;
+    background: #2a3042;
+}
+
+.logo {
+    display:block;
+    line-height: 70px;
+}
+
+.logo img {
+    height:48px;
 }
 
 .app-search {
     padding: calc(32px * .5) 0;
+    padding-left: 1rem;
 }
 
 .app-search .form-control {
@@ -45,13 +54,38 @@ header {
     -webkit-box-shadow: none;
     box-shadow: none;
     border-radius: 30px;
+    color: var(--bs-gray-600);
 }
 
-.app-search span {
+.app-search i {
     position: absolute;
     z-index: 10;
     font-size: 16px;
+    line-height: 38px;
     left: 13px;
     top: 0;
     color: var(--bs-gray-600);
+}
+
+.app-search input::placeholder {
+    color: var(--bs-gray-600);
+}
+
+.header-profile-avatar {
+    height: 36px;
+    width: 36px;
+    background-color: var(--bs-gray-300);
+    padding: 3px;
+}
+
+.notification,
+.settings {
+    font-size: 20px;
+}
+
+.notification .badge {
+    position: absolute;
+    top: 6px;
+    right: 2px;
+    font-size: 11px;
 }
