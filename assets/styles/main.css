@@ -10,3 +10,15 @@ body {
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
 }
+
+.dropdown-menu {
+    --bs-dropdown-bg: #2a3042;
+    --bs-dropdown-link-color: #a6b0cf;
+    --bs-dropdown-border-color: #32394e;
+    --bs-dropdown-border-width: 1px;
+    --bs-dropdown-divider-bg: #32394e;
+    --bs-dropdown-link-hover-bg: #32394e;
+    --bs-dropdown-link-hover-color: #e9ecef;
+    --bs-dropdown-link-active-bg: #32394e;
+    --bs-dropdown-link-active-color: #e9ecef;
+}
