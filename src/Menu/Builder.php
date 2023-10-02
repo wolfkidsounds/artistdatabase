@@ -22,7 +22,7 @@ class MenuBuilder
         $menu = $this->factory->createItem('sidebar');
 
         $menu->addChild('Dashboard', ['route' => 'app_main']);
-        $menu->addChild('Members', ['route' => 'app_main']);
+        $menu->addChild('Members', ['route' => 'app_members']);
         $menu->addChild('Artists', ['route' => 'app_main']);
 
         return $menu;
@@ -32,10 +32,40 @@ class MenuBuilder
     {
         $menu = $this->factory->createItem('profile');
 
-        $menu->addChild('Profile', ['route' => 'app_main']);
-        $menu->addChild('Notifications', ['route' => 'app_main']);
-        $menu->addChild('Messages', ['route' => 'app_main']);
-        $menu->addChild('Settings', ['route' => 'app_main']);
+        $menu->addChild('Profile', [
+            'route' => 'app_main',
+            'extras' => [
+                'icon' => 'fa-solid fa-circle-user',
+            ]
+        ]);
+
+        $menu->addChild('Account', [
+            'route' => 'app_main',
+            'extras' => [
+                'icon' => 'fa-solid fa-user',
+            ]
+        ]);
+
+        $menu->addChild('Notifications', [
+            'route' => 'app_main',
+            'extras' => [
+                'icon' => 'fa-solid fa-bell',
+            ]
+        ]);
+
+        $menu->addChild('Messages', [
+            'route' => 'app_main',
+            'extras' => [
+                'icon' => 'fa-solid fa-message',
+            ]
+        ]);
+
+        $menu->addChild('Settings', [
+            'route' => 'app_main',
+            'extras' => [
+                'icon' => 'fa-solid fa-gear',
+            ]
+        ]);
 
         return $menu;
     }
