@@ -1,4 +1,3 @@
-import './bootstrap.js';
 /*
  * Welcome to your app's main JavaScript file!
  *
@@ -7,4 +6,9 @@ import './bootstrap.js';
  */
 
 // any CSS you import will output into a single css file (app.css in this case)
-import './styles/app.css';
+import './stimulus.js'; // Stimulus
+import './styles/app.scss'; // SCSS
+import './styles/app.css'; // CSS (Overwrites)
+
+require('@popperjs/core'); // Popper JS wird von Bootstrap erwartet.
+require('bootstrap'); // Das Bootstrap-Modul exportiert nicht und sendet nichts als return
