@@ -3,45 +3,23 @@
     <div class="d-flex">
 
         <!-- LOGO -->
-        <div class="logo-box">
-            <a href="/" class="logo">
-                <img src="{{ asset('images/logo.svg') }}">
-            </a>
-        </div>
+        {{ include('partials/header/logo.html.twig') }}
 
         <!-- SEARCH-->
-        <form class="app-search d-none d-lg-block">
-            <div class="position-relative">
-                <input type="text" class="form-control" placeholder="Search...">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
-        </form> 
+        {{ include('partials/header/search.html.twig') }}
+
     </div>
 
     <div class="d-flex">
 
         <!-- PROFILE-NAV-->
-        <div class="dropdown d-inline-block">
-            <button type="button" class="btn header-item profile">
-                <img class="rounded-circle header-profile-avatar" src="{{ user.image|default(asset('images/user-solid.svg')) }}" alt="Header Avatar">
-                <span class="d-none d-xl-inline-block ms-1" key="t-henry">{{ user.name|default('username') }}</span>
-                <i class="fa-solid fa-chevron-down"></i>
-            </button>
-        </div>
+        {{ include('partials/header/nav_profile.html.twig') }}
 
         <!-- NOTIFICATIONS-->
-        <div class="dropdown d-inline-block">
-            <button type="button" class="btn header-item notification">
-                <i class="fa-solid fa-bell"></i>
-                <span class="badge bg-danger rounded-pill">3</span>
-            </button>
-        </div>
+        {{ include('partials/header/notifications.html.twig') }}
 
         <!-- SETTINGS -->
-        <div class="dropdown d-inline-block">
-            <button type="button" class="btn header-item settings">
-                <i class="fa-solid fa-gear"></i>
-            </button>
-        </div>
+        {{ include('partials/header/settings.html.twig') }}
+
     </div>
 </div>
