@@ -24,6 +24,4 @@ services:
         class: App\Menu\MenuBuilder
         arguments: ["@knp_menu.factory"]
         tags:
-            - { name: knp_menu.menu_builder, method: navMain, alias: navMain } # The alias is what is used to retrieve the menu
-            - { name: knp_menu.menu_builder, method: navSidebar, alias: navSidebar } # The alias is what is used to retrieve the menu
-            - { name: knp_menu.menu_builder, method: navProfile, alias: navProfile } # The alias is what is used to retrieve the menu
+            - { name: knp_menu.menu_builder, method: breadcrumbs, alias: breadcrumbs } # The alias is what is used to retrieve the menu
