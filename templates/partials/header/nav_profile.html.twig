@@ -8,7 +8,8 @@
             <p class="mb-0">{{ user.mail|default('usermail') }}</p>
         </div>
 
-        {{ knp_menu_render('navProfile', {'template': 'menu/menu_profile_render.html.twig'}) }}
+        {% set profile = knp_menu_get('breadcrumbs', ['Profile']) %}
+        {{ knp_menu_render(profile, {'template': 'menu/menu_profile_render.html.twig'}) }}
 
         <div class="dropdown-divider"></div>
         <a class="dropdown-item text-danger" href="/logout"><i class="fa-solid fa-power-off"></i><span>Logout</span></a>
