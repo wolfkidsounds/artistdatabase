@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b65c7694849a3bf2bbffc3be8e3b593a",
+    "content-hash": "a865e7843c37b4b59566ad6d42bab637",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1908,6 +1908,73 @@
                 "source": "https://github.com/nelmio/NelmioApiDocBundle/tree/v4.12.0"
             },
             "time": "2023-06-16T10:39:21+00:00"
+        },
+        {
+            "name": "novaway/feature-flag-bundle",
+            "version": "2.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/novaway/NovawayFeatureFlagBundle.git",
+                "reference": "b5479914c9f7c8079b707d68f1d026aa1c3b0c56"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/novaway/NovawayFeatureFlagBundle/zipball/b5479914c9f7c8079b707d68f1d026aa1c3b0c56",
+                "reference": "b5479914c9f7c8079b707d68f1d026aa1c3b0c56",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/annotations": "^1.12|^2.0",
+                "ext-json": "*",
+                "php": ">= 7.3",
+                "symfony/framework-bundle": "~4.4|~5.0|~6.0",
+                "symfony/yaml": "~4.4|~5.0|~6.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.0",
+                "phpstan/extension-installer": "^1.1",
+                "phpstan/phpstan": "^1.7",
+                "phpunit/phpunit": "^9.5",
+                "symfony/asset": "~3.0|~4.0|~5.0|~6.0",
+                "symfony/browser-kit": "~4.0|~5.0|~6.0",
+                "symfony/css-selector": "~4.0|~5.0|~6.0",
+                "symfony/templating": "~4.0|~5.0|~6.0",
+                "symfony/twig-bundle": "~4.0|~5.0|~6.0",
+                "twig/twig": "^v1.42.3|^2.0|^3.0"
+            },
+            "suggest": {
+                "twig/twig": "To check feature in your Twig templates"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "Novaway\\Bundle\\FeatureFlagBundle\\": "src/"
+                },
+                "exclude-from-classmap": [
+                    "src/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jérémy DECOOL",
+                    "email": "jeremy@novaway.fr"
+                }
+            ],
+            "description": "Very KISS bundle to manage features flag",
+            "keywords": [
+                "feature",
+                "flag",
+                "symfony"
+            ],
+            "support": {
+                "issues": "https://github.com/novaway/NovawayFeatureFlagBundle/issues",
+                "source": "https://github.com/novaway/NovawayFeatureFlagBundle/tree/2.3.0"
+            },
+            "time": "2023-05-02T10:09:00+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -10623,5 +10690,5 @@
         "ext-iconv": "*"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.3.0"
 }
