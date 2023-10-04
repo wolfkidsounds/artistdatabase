@@ -1,0 +1,138 @@
+.menu-title {
+    color: #6a7187 !important;
+}
+
+.list-unstyled {
+    margin: 0px;
+    padding-left: 0px;
+    list-style: none;
+}
+
+.list-unstyled ul {
+    margin: 0px;
+    padding-left: 0px;
+    list-style: none;
+}
+
+.vertical-menu {
+    width: 250px;
+    z-index: 1001;
+    bottom: 0;
+    margin-top: 0;
+    position: fixed;
+    top: 70px;
+    -webkit-box-shadow: 0 .75rem 1.5rem rgba(18,38,63,.03);
+    box-shadow: 0 .75rem 1.5rem rgba(18,38,63,.03)
+}
+
+#sidebar-menu {
+    padding: 10px 0 30px 0;
+}
+
+#side-menu li {
+    margin: 0px;
+    padding-left: 0px;
+    list-style: none;
+}
+
+#side-menu li a {
+    padding-top: 0.4rem;
+    padding-right: 0.8rem;
+    padding-bottom: 0.4rem;
+    padding-left: 0.8rem;
+    padding: 0.625rem 1.5rem;
+}
+
+#sidebar-menu {
+    padding: 10px 0 30px 0;
+}
+
+#sidebar-menu ul li a {
+    display: block;
+    color: #545a6d;
+    position: relative;
+    font-size: 13px;
+    -webkit-transition: all .4s;
+    transition: all .4s
+}
+
+#sidebar-menu ul li a:hover {
+    color: #383c40
+}
+
+#sidebar-menu ul li a:hover i {
+    color: #383c40
+}
+
+#sidebar-menu ul li .badge {
+    margin-top: 4px
+}
+
+#sidebar-menu ul li ul.sub-menu {
+    padding: 0
+}
+
+#sidebar-menu ul li ul.sub-menu li a {
+    padding: .4rem 1.5rem .4rem 3.5rem;
+    font-size: 13px;
+    color: #545a6d
+}
+
+#sidebar-menu ul li ul.sub-menu li a:hover {
+    color: #383c40
+}
+
+#sidebar-menu ul li ul.sub-menu li ul.sub-menu {
+    padding: 0
+}
+
+#sidebar-menu ul li ul.sub-menu li ul.sub-menu li a {
+    padding: .4rem 1.5rem .4rem 4.5rem;
+    font-size: 13px
+}
+
+.menu-title {
+    padding: 12px 20px!important;
+    letter-spacing: .05em;
+    pointer-events: none;
+    cursor: default;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 600
+}
+
+.vertical-menu {
+    background: #2a3042;
+}
+
+#sidebar-menu ul li a {
+    color: #a6b0cf
+}
+
+#sidebar-menu ul li a:hover {
+    color: #fff
+}
+
+#sidebar-menu ul li a:hover i {
+    color: #fff
+}
+
+#sidebar-menu ul li ul.sub-menu li a {
+    color: #79829c
+}
+
+#sidebar-menu ul li ul.sub-menu li a:hover {
+    color: #fff
+}
+
+#sidebar-menu ul li a i {
+    display: inline-block;
+    min-width: 2rem;
+    /* padding-bottom: 0.125em; */
+    font-size: 16px;
+    /* line-height: 1.40625rem; */
+    vertical-align: middle;
+    color: #6a7187;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+}

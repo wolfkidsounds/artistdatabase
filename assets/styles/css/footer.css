@@ -1,0 +1,10 @@
+.footer {
+    bottom: 0;
+    padding: 20px calc(24px * .75);
+    position: absolute;
+    right: 0;
+    color: var(--bs-footer-color);
+    left: 250px;
+    height: 60px;
+    background-color: var(--bs-footer-bg);
+}
