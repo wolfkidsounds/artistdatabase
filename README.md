@@ -12,7 +12,6 @@ How to use
 8. run "npm run watch" (runs the watcher to compile css and javascript)
 9. run "symfony serve -d" (starts the server)
 
-
 ---
 
 **Optional**

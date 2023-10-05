@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+{% block layout %}
+        <header id="header_wrapper" class="d-flex justify-content-between align-items-center m-0">
+            {% use 'partials/header/header.html.twig' %}
+            {% block header %}
+                {{ parent() }}
+            {% endblock %}
+        </header>
+
+        <div id="sidebar_wrapper">
+            {% use 'partials/sidebar/sidebar.html.twig' %}
+            {% block sidebar %}
+                {{ parent() }}
+            {% endblock %}
+        </div>
+
+        <div id="content_wrapper">
+            <div id="breadcrumbs">
+                {{ include('partials/breadcrumbs/breadcrumb.html.twig') }}
+            </div>
+            
+            {# page_content can also be overwritten #}
+            {% block page_content %}
+            {% endblock %}
+        </div>
+
+        {% use 'partials/footer/footer.html.twig' %}
+        <footer id="footer_wrapper">
+            {% block footer %}
+                {{ parent() }}
+            {% endblock %}
+        </footer>
+{% endblock %}

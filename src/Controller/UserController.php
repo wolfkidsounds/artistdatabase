@@ -8,18 +8,18 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class UserController extends AbstractController
 {
-    #[Route('/user', name: 'app_user')]
-    public function users(): Response
+    #[Route('/members', name: 'app_members')]
+    public function members(): Response
     {
-        return $this->render('user/index.html.twig', [
+        return $this->render('members/index.html.twig', [
             'controller_name' => 'UserController',
         ]);
     }
 
-    #[Route('/user/{id}', name: 'app_user_single')]
+    #[Route('/members/{id}', name: 'app_members_id')]
     public function user(): Response
     {
-        return $this->render('user/single.html.twig', [
+        return $this->render('members/id.html.twig', [
             'controller_name' => 'UserController',
         ]);
     }

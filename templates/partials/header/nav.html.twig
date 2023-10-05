@@ -1,0 +1,39 @@
+{% block nav_menu %}
+        <!-- PROFILE-NAV-->
+        <div id="header_profile_nav" class="dropdown">
+            <button type="button" class="header-item btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                {% if user.image_path is defined %}
+                    <img class="rounded-circle" src="{{ user.image_path }}">
+                {% else %}
+                    <i class="rounded-circle fa-solid fa-user"></i>
+                {% endif %}
+                
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+                <div class="p-3 border-bottom profile-description">
+                    <h5 class="mb-0">{{ user.name|default('username') }}</h5>
+                    <p class="mb-0">{{ user.mail|default('usermail') }}</p>
+                </div>
+
+                {% set profile = knp_menu_get('breadcrumbs', ['Profile']) %}
+                {{ knp_menu_render(profile, {'template': 'menu/menu_profile_render.html.twig'}) }}
+
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item text-danger" href="{# {{ path('app_logout') }} #}"><i class="fa-solid fa-power-off"></i><span>Logout</span></a>
+            </div>
+        </div>
+
+        <!-- NOTIFICATIONS-->
+        <div id="header_notifications" class="dropdown d-inline-block">
+            <button type="button" class="btn header-item notification">
+                <i class="fa-solid fa-bell"></i>
+            </button>
+        </div>
+
+        <!-- SETTINGS -->
+        <div id="header_settings" class="dropdown d-inline-block">
+            <button type="button" class="btn header-item settings">
+                <i class="fa-solid fa-gear"></i>
+            </button>
+        </div>
+{% endblock %}

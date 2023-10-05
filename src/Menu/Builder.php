@@ -17,25 +17,113 @@ class MenuBuilder
         $this->factory = $factory;
     }
 
-    public function navSidebar(): ItemInterface
+    public function breadcrumbs(): ItemInterface
     {
-        $menu = $this->factory->createItem('sidebar');
+        $menu = $this->factory->createItem('App');
 
-        $menu->addChild('Dashboard', ['route' => 'app_main']);
-        $menu->addChild('Members', ['route' => 'app_main']);
-        $menu->addChild('Artists', ['route' => 'app_main']);
+        $menu->addChild('Dashboard', [
+            'route' => 'app_main',
+            'extras' => [
+                'icon' => 'fa-solid fa-gauge',
+            ]
+        ]);
 
-        return $menu;
-    }
+        $menu->addChild('Profile');
 
-    public function navProfile(): ItemInterface
-    {
-        $menu = $this->factory->createItem('profile');
+        $menu['Profile']->addChild('Profile', [
+            'route' => 'app_main',
+            'extras' => [
+                'icon' => 'fa-solid fa-circle-user',
+            ]
+        ]);
 
-        $menu->addChild('Profile', ['route' => 'app_main']);
-        $menu->addChild('Notifications', ['route' => 'app_main']);
-        $menu->addChild('Messages', ['route' => 'app_main']);
-        $menu->addChild('Settings', ['route' => 'app_main']);
+        $menu['Profile']->addChild('Account', [
+            'route' => 'app_main',
+            'extras' => [
+                'icon' => 'fa-solid fa-user',
+            ]
+        ]);
+
+        $menu['Profile']->addChild('Notifications', [
+            'route' => 'app_main',
+            'extras' => [
+                'icon' => 'fa-solid fa-bell',
+            ]
+        ]);
+
+        $menu['Profile']->addChild('Messages', [
+            'route' => 'app_main',
+            'extras' => [
+                'icon' => 'fa-solid fa-message',
+            ]
+        ]);
+
+        $menu['Profile']->addChild('Settings', [
+            'route' => 'app_main',
+            'extras' => [
+                'icon' => 'fa-solid fa-gear',
+            ]
+        ]);
+
+        $menu->addChild('All Members');
+
+        $menu['All Members']->addChild('Members', [
+            'route' => 'app_main',
+            'extras' => [
+                'icon' => 'fa-solid fa-user-group',
+            ]
+        ]);
+
+        $menu['All Members']->addChild('Artists', [
+            'route' => 'app_main',
+            'extras' => [
+                'icon' => 'fa-solid fa-music',
+            ]
+        ]);
+
+        $menu['All Members']->addChild('DJs', [
+            'route' => 'app_main',
+            'extras' => [
+                'icon' => 'fa-solid fa-record-vinyl',
+            ]
+        ]);
+
+        $menu['All Members']->addChild('Live Acts', [
+            'route' => 'app_main',
+            'extras' => [
+                'icon' => 'fa-solid fa-guitar',
+            ]
+        ]);
+
+        $menu['All Members']->addChild('Producers', [
+            'route' => 'app_main',
+            'extras' => [
+                'icon' => 'fa-solid fa-headphones',
+            ]
+        ]);
+
+        $menu->addChild('All Groups');
+
+        $menu['All Groups']->addChild('Groups', [
+            'route' => 'app_main',
+            'extras' => [
+                'icon' => 'fa-solid fa-people-group',
+            ]
+        ]);
+
+        $menu['All Groups']->addChild('Labels', [
+            'route' => 'app_main',
+            'extras' => [
+                'icon' => 'fa-solid fa-users-rectangle',
+            ]
+        ]);
+
+        $menu['All Groups']->addChild('Crews', [
+            'route' => 'app_main',
+            'extras' => [
+                'icon' => 'fa-solid fa-people-roof',
+            ]
+        ]);
 
         return $menu;
     }

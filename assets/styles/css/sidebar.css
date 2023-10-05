@@ -1,0 +1,18 @@
+#sidebar_wrapper {
+    width: var(--adb-sidebar-width);
+    z-index: 99;
+    top: var(--adb-header-height);
+    left:0;
+    bottom: 0;
+    margin: 0;
+    position: fixed;
+
+    -webkit-box-shadow: 0 0.75rem 1.5rem rgba(18,38,63,.03);
+    box-shadow: 0 0.75rem 1.5rem rgba(18,38,63,.03);
+
+    background:var(--adb-sidebar-bg-color);
+}
+
+#sidebar_menu {
+
+}

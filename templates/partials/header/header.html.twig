@@ -1,0 +1,28 @@
+{% use 'partials/header/nav.html.twig' %}
+{% block header %}
+        <div id="header" class="d-flex justify-content-between align-items-center m-0">
+            <div id="header_left" class="d-flex">
+
+                <!-- LOGO -->
+                <div id="header_logo">
+                    <a href="/">
+                        <img class="logo-lg" src="{{ asset('images/logo.svg') }}">
+                    </a>
+                </div>
+
+                <!-- SEARCH-->
+                <form id="header_search">
+                    <input type="text" class="form-control" placeholder="Search...">
+                    <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                </form> 
+
+            </div>
+
+            <div id="header_right">
+                {% block nav_menu %}
+                    {{ parent() }}
+                {% endblock %}
+            </div>
+
+        </div>
+{% endblock %}

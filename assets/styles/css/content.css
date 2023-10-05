@@ -1,0 +1,6 @@
+#content_wrapper {
+    margin-left: var(--adb-sidebar-width);
+    margin-top: var(--adb-header-height);
+    padding: calc(24px * 0.75);
+
+}

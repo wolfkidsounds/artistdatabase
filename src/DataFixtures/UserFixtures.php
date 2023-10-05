@@ -12,26 +12,15 @@ class UserFixtures extends Fixture
     public function load(ObjectManager $manager): void
     {
         $user = new User();
-        $user->setUsername('admin');
+        $user->setUsername('Pulsation Audio');
         $user->setRoles(['ROLE_ADMIN']);
-        $password = 'symfony';
-        $hashed_pwd = UserFixtures::hash($user, $password);
-        $user->setPassword($hashed_pwd);
+        $password = '$2y$13$wcrIudT9RuEflF.CpbRrOecQ05/Spfu2vS2SjSGok1Lay134Pdybm'; // symfony
+        $user->setPassword($password);
         $user->setEmail('admin@artist-database.com');
-        $user->setVorname('Symfony');
-        $user->setNachname('Administrator');
+        $user->setVorname('Pulsation');
+        $user->setNachname('Audio');
+
         $manager->persist($user);
         $manager->flush();
-    }
-
-    static function hash( $user, $password, UserPasswordHasherInterface $passwordHasher = null ) {
- 
-        // hash the password (based on the security.yaml config for the $user class)
-        $password_hashed = $passwordHasher->hashPassword(
-            $user,
-            $password
-        );
-
-        return $password_hashed;
     }
 }

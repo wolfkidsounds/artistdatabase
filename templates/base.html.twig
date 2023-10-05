@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html>
-
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Artist Database{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        
         {% block stylesheets %}
             {{ encore_entry_link_tags('artistdatabase') }}
         {% endblock %}
@@ -14,32 +11,13 @@
             {{ encore_entry_script_tags('artistdatabase') }}
         {% endblock %}
     </head>
-
-    <body>
-        <div id="layout-wrapper">
-            <header id="page-topbar">
-                {{ include('partials/header.html.twig') }}
-            </header>
-
-            <div class="sidebar">
-                {{ include('partials/sidebar.html.twig') }}
+    <body data-bs-theme="dark">
+        {# body_replace can be used to skip the entire layout section #}
+        {% block body_replace %}
+            <div id="layout_wrapper">
+                {% block layout %}
+                {% endblock %}
             </div>
-
-            <div class="content">
-                <div class="page-content">
-                    <div class="row bredcrumbs-element">
-                        {% block breadcrumbs %}
-                        {% endblock %}
-                    </div>
-                    
-                    {% block body %}
-                    {% endblock %}
-                </div>
-            </div>
-
-            <footer class="footer">
-                {{ include('partials/footer.html.twig') }}
-            </footer>
-        </div>
+        {% endblock %}
     </body>
 </html>

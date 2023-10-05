@@ -1,0 +1,16 @@
+
+<div class="d-sm-flex align-items-center justify-content-between">
+    <h4 class="mb-sm-0 font-size-18">{{ title }}</h4>
+
+    <div class="breadcrumbs-right">
+        <ol class="breadcrumb m-0">
+            {% for breadcrumb_item in knp_menu_get_breadcrumbs_array(knp_menu_get_current_item('breadcrumbs')) %}
+                {% if not loop.last %}
+                    <li class="breadcrumb-item"><a href="{{ breadcrumb_item.uri }}">{{ breadcrumb_item.label }}</a></li>
+                {% else %}
+                    <li class="breadcrumb-item active">{{ breadcrumb_item.label }}</li>
+                {% endif %}
+            {% endfor %}
+        </ol>
+    </div>
+</div>
