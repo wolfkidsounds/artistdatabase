@@ -19,11 +19,16 @@ class MenuBuilder
 
     public function breadcrumbs(): ItemInterface
     {
-        $menu = $this->factory->createItem('main');
+        $menu = $this->factory->createItem('App');
 
-        $menu->addChild('Profile', [
-            'route' => 'app_main'
+        $menu->addChild('Dashboard', [
+            'route' => 'app_main',
+            'extras' => [
+                'icon' => 'fa-solid fa-gauge',
+            ]
         ]);
+
+        $menu->addChild('Profile');
 
         $menu['Profile']->addChild('Profile', [
             'route' => 'app_main',
@@ -60,7 +65,7 @@ class MenuBuilder
             ]
         ]);
 
-        $menu->addChild('All Members', ['route' => 'app_main']);
+        $menu->addChild('All Members');
 
         $menu['All Members']->addChild('Members', [
             'route' => 'app_main',
@@ -97,7 +102,7 @@ class MenuBuilder
             ]
         ]);
 
-        $menu->addChild('All Groups', ['route' => 'app_main']);
+        $menu->addChild('All Groups');
 
         $menu['All Groups']->addChild('Groups', [
             'route' => 'app_main',
