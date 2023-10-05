@@ -1,0 +1,29 @@
+novaway_feature_flag:
+    features:
+        dev:
+            enabled: true
+            description: MyFeature1 description text
+        members:
+            enabled: true
+            description: MyFeature1 description text
+        artists:
+            enabled: true
+            description: MyFeature2 description text
+        djs:
+            enabled: true
+            description: MyFeature3 description text
+        acts:
+            enabled: true
+            description: MyFeature3 description text
+        producers:
+            enabled: true
+            description: MyFeature3 description text
+        groups:
+            enabled: true
+            description: MyFeature3 description text
+        labels:
+            enabled: true
+            description: MyFeature3 description text
+        crews:
+            enabled: true
+            description: MyFeature3 description text
