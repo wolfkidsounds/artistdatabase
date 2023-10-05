@@ -15,7 +15,6 @@ return [
     Symfony\UX\StimulusBundle\StimulusBundle::class => ['all' => true],
     Symfony\UX\Turbo\TurboBundle::class => ['all' => true],
     EasyCorp\Bundle\EasyAdminBundle\EasyAdminBundle::class => ['all' => true],
-    Nelmio\ApiDocBundle\NelmioApiDocBundle::class => ['all' => true],
     Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle::class => ['dev' => true, 'test' => true],
     Knp\Bundle\MenuBundle\KnpMenuBundle::class => ['all' => true],
     Novaway\Bundle\FeatureFlagBundle\NovawayFeatureFlagBundle::class => ['all' => true],
