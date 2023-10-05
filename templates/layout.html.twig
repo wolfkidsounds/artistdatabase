@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+{% block layout %}
+    <div id="layout-wrapper">
+
+        {% use 'partials/header/header.html.twig' %}
+        {% block header %}
+            {{ parent() }}
+        {% endblock %}
+
+        <div class="vertical-menu">
+            {% use 'partials/sidebar/sidebar.html.twig' %}
+            {% block sidebar %}
+                {{ parent() }}
+            {% endblock %}
+        </div>
+
+        <div class="content">
+            <div class="page-content">
+                <div class="row bredcrumbs-element">
+                    {{ include('partials/breadcrumbs/breadcrumb.html.twig') }}
+                </div>
+                
+                {# page_content can also be overwritten #}
+                {% block page_content %}
+                {% endblock %}
+            </div>
+        </div>
+
+        {% use 'partials/footer/footer.html.twig' %}
+        <footer class="footer">
+            {% block footer %}
+                {{ parent() }}
+            {% endblock %}
+        </footer>
+    </div>
+{% endblock %}

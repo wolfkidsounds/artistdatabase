@@ -1,0 +1,32 @@
+{% use 'partials/header/nav.html.twig' %}
+{% block header %}
+    <header id="page-topbar">         
+        <div class="navbar">
+            <div class="d-flex">
+
+                <!-- LOGO -->
+                <div class="logo-box">
+                    <a href="/" class="logo">
+                        <img src="{{ asset('images/logo.svg') }}">
+                    </a>
+                </div>
+
+                <!-- SEARCH-->
+                <form class="app-search d-none d-lg-block">
+                    <div class="position-relative">
+                        <input type="text" class="form-control" placeholder="Search...">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </form> 
+
+            </div>
+
+            <div class="d-flex">
+                {% block nav_menu %}
+                    {{ parent() }}
+                {% endblock %}
+            </div>
+            
+        </div>
+    </header>
+{% endblock %}

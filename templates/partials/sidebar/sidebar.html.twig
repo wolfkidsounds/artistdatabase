@@ -1,0 +1,8 @@
+{% use 'partials/sidebar/menu.html.twig' %}
+{% block sidebar %}
+    <div data-simplebar="init" class="h-100">
+        {% block sidebar_menu %}
+            {{ parent() }}
+        {% endblock %}
+    </div>
+{% endblock %}
