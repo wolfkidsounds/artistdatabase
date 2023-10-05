@@ -1,15 +1,4 @@
 @import "./css/root.css";
-@import "./css/select2.css";
-@import "./css/media.css";
-
-@import "./css/breadcrumb.css";
-@import "./css/container.css";
-@import "./css/dropdown.css";
 @import "./css/fonts.css";
-@import "./css/footer.css";
-@import "./css/header.css";
-@import "./css/main.css";
-@import "./css/menu.css";
-@import "./css/sidebar.css";
 
 @import "~@fortawesome/fontawesome-free/css/all.css";
