@@ -1,4 +1,5 @@
 [![Symfony](https://github.com/wolfkidsounds/artistdatabase/actions/workflows/symfony.yml/badge.svg)](https://github.com/wolfkidsounds/artistdatabase/actions/workflows/symfony.yml)
+[![Tests](https://github.com/wolfkidsounds/artistdatabase/actions/workflows/tests.yaml/badge.svg)](https://github.com/wolfkidsounds/artistdatabase/actions/workflows/tests.yaml)
 
 How to use
 

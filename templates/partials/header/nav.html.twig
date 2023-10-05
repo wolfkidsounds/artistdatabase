@@ -10,16 +10,23 @@
                 
             </button>
             <div class="dropdown-menu dropdown-menu-end">
-                <div class="p-3 border-bottom profile-description">
+                <div class="p-2 profile-description">
                     <h5 class="mb-0">{{ user.name|default('username') }}</h5>
                     <p class="mb-0">{{ user.mail|default('usermail') }}</p>
                 </div>
+
+                <div class="dropdown-divider"></div>
 
                 {% set profile = knp_menu_get('breadcrumbs', ['Profile']) %}
                 {{ knp_menu_render(profile, {'template': 'menu/menu_profile_render.html.twig'}) }}
 
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item text-danger" href="{# {{ path('app_logout') }} #}"><i class="fa-solid fa-power-off"></i><span>Logout</span></a>
+                    <ul>
+                        <li>
+                        <a class="dropdown-item text-danger" href="{# {{ path('app_logout') }} #}">
+                        <i class="fa-solid fa-power-off"></i>Logout</a>
+                    </li>
+                </ul>
             </div>
         </div>
 
