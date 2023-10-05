@@ -1,3 +1,8 @@
-@import "_colors.scss";
+$color-mode-type: data;
+$enable-dark-mode:true;
+$enable-rounded:true;
+$enable-transitions:true;
+$enable-caret:false;
+$enable-smooth-scroll:true;
 
 @import "~bootstrap/scss/bootstrap";
