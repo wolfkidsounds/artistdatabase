@@ -11,8 +11,41 @@
     box-shadow: 0 0.75rem 1.5rem rgba(18,38,63,.03);
 
     background:var(--adb-sidebar-bg-color);
+
+    padding-top:10px;
+    padding-bottom:20px;
 }
 
-#sidebar_menu {
+#sidebar_menu ul {
+    margin:0px;
+    padding:0px;
+    list-style:none;
+}
 
+#sidebar_menu a {
+    display: block;
+    padding: 0.5rem 1.4rem;
+    color: #aeb5cb;
+    position: relative;
+    font-size: 16px;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    text-decoration:none;
+}
+
+#sidebar_menu li i {
+    min-width:1.5rem;
+}
+
+#sidebar_menu a:hover {
+    color:#fff;
+}
+
+.menu-title {
+    display:block;
+    color:#5c688f;
+    padding: 10px 20px;
+    font-size:12px;
+    text-transform: uppercase;
+    font-weight: 600;
 }

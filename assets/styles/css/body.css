@@ -1,3 +1,7 @@
 body {
     background:var(--adb-body-bg-color);
 }
+
+button {
+    border:none !important;
+}
