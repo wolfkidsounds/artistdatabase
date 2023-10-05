@@ -1,8 +1,18 @@
-{% use 'partials/sidebar/menu.html.twig' %}
 {% block sidebar %}
-    <div data-simplebar="init" class="h-100">
-        {% block sidebar_menu %}
-            {{ parent() }}
-        {% endblock %}
+    <!--- Sidebar Menu -->
+    <div id="sidebar_menu">
+
+        <ul class="list-unstyled mm-show">
+            <li class="menu-title">Members</li>
+
+            {% set Members = knp_menu_get('breadcrumbs', ['All Members']) %}
+            {{ knp_menu_render(Members, {'template': 'menu/menu_sidebar_render.html.twig'}) }}
+
+            <li class="menu-title">Groups</li>
+
+            {% set Groups = knp_menu_get('breadcrumbs', ['All Groups']) %}
+            {{ knp_menu_render(Groups, {'template': 'menu/menu_sidebar_render.html.twig'}) }}
+
+        </ul>
     </div>
 {% endblock %}

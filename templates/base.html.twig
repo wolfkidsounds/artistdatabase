@@ -11,11 +11,13 @@
             {{ encore_entry_script_tags('artistdatabase') }}
         {% endblock %}
     </head>
-    <body>
+    <body data-bs-theme="dark">
         {# body_replace can be used to skip the entire layout section #}
         {% block body_replace %}
-            {% block layout %}
-            {% endblock %}
+            <div id="layout_wrapper">
+                {% block layout %}
+                {% endblock %}
+            </div>
         {% endblock %}
     </body>
 </html>
