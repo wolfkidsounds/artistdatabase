@@ -51,12 +51,23 @@
     line-height:70px;
     height:70px;
     background:var(--adb-sidebar-bg-color);
+    border-bottom:1px solid #242938;
 }
 
 #header_logo a {
     display:block;
     line-height:70px;
     height:70px;
+    color: var(--adb-font-color);
+}
+
+.header-item {
+    color: var(--adb-font-color);
+}
+
+.header-item:hover,
+.header-item:active {
+    color: #fff;
 }
 
 #header_logo img {

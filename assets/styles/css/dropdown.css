@@ -19,11 +19,13 @@
 
 .dropdown-menu i {
     font-size:16px !important;
-    margin-right:0.25rem;
+    min-width:1.5rem;
 }
 
 .dropdown-menu a {
     font-size:16px !important;
+    -webkit-transition: all .3s;
+    transition: all .3s;
 }
 
 .profile-description p {

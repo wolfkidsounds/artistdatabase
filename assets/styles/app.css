@@ -7,4 +7,6 @@
 @import "./css/dropdown.css";
 @import "./css/content.css";
 
+@import "./css/helper.css";
+
 @import "~@fortawesome/fontawesome-free/css/all.css";
