@@ -6,52 +6,52 @@ call git status | findstr /C:"composer.lock" /C:"composer.json" /C:"symfony.lock
 
 if %errorlevel%==0 (
     echo ======================================================
-    echo Changes were found in Composer, Symfony, or NPM files.
-    echo Please commit these changes before proceeding.
+    echo Es wurden Änderungen in Composer-, Symfony- oder NPM-Dateien gefunden.
+    echo Bitte bestätige diese Änderungen, damit du fortfahren kannst.
     echo ======================================================
     pause
     exit /b
 ) else (
     echo ======================================================
-    echo There are no current changes in Composer, Symfony, or NPM files.
-    echo Continue the script.
+    echo Es gibt keine aktuellen Änderungen in Composer-, Symfony- oder NPM-Dateien.
+    echo Das Skript wird weiter ausgeführt.
     echo ======================================================
 )
 
 echo ======================================================
-echo Pulling from GitHub repository
+echo Änderungen aus dem GitHub-Repository abrufen.
 echo ======================================================
 call git pull
 
 echo ======================================================
-echo Stashing current changes
+echo Speichern von aktuellen Änderungen
 echo ======================================================
-call git stash save "Stashing current changes"
+call git stash save "Aktuelle Änderungen speichern"
 
 echo ======================================================
-echo Install Composer Dependencies
+echo Installieren von Composer-Abhängigkeiten
 echo ======================================================
 call composer install
 
 echo ======================================================
-echo Install Node Dependencies & Updating
+echo Installieren von Node.js-Abhängigkeiten
 echo ======================================================
 call npm install
 
 echo ======================================================
-echo Install Updates
+echo Installieren von Updates
 echo ======================================================
 call composer update
 call npm update
 
 echo ======================================================
-echo Save & Upload Changes
+echo Hinzufügen, Übertragen und Veröffentlichen von Änderungen auf GitHub
 echo ======================================================
 call git add .
 call git commit -m "Update dependencies"
 call git push
 
 echo ======================================================
-echo Reload Stashed Changes
+echo Gespeicherte Änderungen wiederherstellen.
 echo ======================================================
 call git stash pop
