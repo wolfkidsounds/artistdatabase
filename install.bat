@@ -7,14 +7,14 @@ call git status | findstr /C:"composer.lock" /C:"composer.json" /C:"symfony.lock
 if %errorlevel%==0 (
     echo ======================================================
     echo Es wurden Aenderungen in Composer-, Symfony- oder NPM-Dateien gefunden.
-    echo Bitte bestätige diese Änderungen, damit du fortfahren kannst.
+    echo Bitte bestaetige diese Aenderungen, damit du fortfahren kannst.
     echo ======================================================
     pause
     exit /b
 ) else (
     echo ======================================================
     echo Es gibt keine aktuellen Aenderungen in Composer-, Symfony- oder NPM-Dateien.
-    echo Das Skript wird weiter ausgeführt.
+    echo Das Skript wird weiter ausgefuehrt.
     echo ======================================================
 )
 
